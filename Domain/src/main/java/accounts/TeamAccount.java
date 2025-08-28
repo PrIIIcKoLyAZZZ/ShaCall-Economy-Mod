@@ -1,6 +1,6 @@
 package accounts;
 
-import ValueObjects.Currency;
+import value_objects.Currency;
 import interfaces.Account;
 import transactions.Transaction;
 import transactions.TransactionType;

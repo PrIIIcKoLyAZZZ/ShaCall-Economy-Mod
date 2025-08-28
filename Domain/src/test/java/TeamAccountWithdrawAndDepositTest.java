@@ -1,4 +1,4 @@
-import ValueObjects.Currency;
+import value_objects.Currency;
 import accounts.TeamAccount;
 import interfaces.Account;
 import org.junit.jupiter.api.BeforeEach;
