@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @Mod(ShaCallEconomyMod.MOD_ID)
 public class ShaCallEconomyMod
 {
-    public static final String MOD_ID = "shacall-economy-mod";
+    public static final String MOD_ID = "shacall_economy_mod";
 
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
