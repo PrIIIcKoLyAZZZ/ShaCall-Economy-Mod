@@ -55,6 +55,11 @@ public class TeamAccount implements Account {
         return this._id;
     }
 
+    @Override
+    public Currency getCurrency() {
+        return this._currency;
+    }
+
     public Integer getTeamId() {
         return this._teamId;
     }

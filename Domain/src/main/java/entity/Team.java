@@ -3,27 +3,27 @@ package entity;
 import interfaces.Entity;
 
 public class Team implements Entity {
-    private Integer _id;
-    private Integer _ownerId;
-    private String _name;
+    private final Integer id;
+    private final Integer ownerId;
+    private final String name;
 
-    public Team(Integer _id, Integer _ownerId, String _name) {
-        this._id = _id;
-        this._ownerId = _ownerId;
-        this._name = _name;
+    public Team(Integer id, Integer ownerId, String name) {
+        this.id = id;
+        this.ownerId = ownerId;
+        this.name = name;
     }
 
     @Override
     public Integer getId() {
-        return this._id;
+        return this.id;
     }
 
     @Override
     public String getName() {
-        return this._name;
+        return this.name;
     }
 
     public Integer getOwnerId() {
-        return this._ownerId;
+        return this.ownerId;
     }
 }

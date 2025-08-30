@@ -5,29 +5,33 @@ import interfaces.Entity;
 import java.util.UUID;
 
 public class User implements Entity {
-    private Integer _id;
-    private UUID _uuid;
-    private String _name;
-    private Integer _teamId;
+    private final Integer id;
+    private final UUID uuid;
+    private final String name;
+    private final Integer teamId;
 
-    public User(Integer _id, UUID _minecraftId, String _name, Integer _teamId) {
-        this._id = _id;
-        this._uuid = _minecraftId;
-        this._name = _name;
-        this._teamId = _teamId;
+    public User(Integer id, UUID uuid, String name, Integer teamId) {
+        this.id = id;
+        this.uuid = uuid;
+        this.name = name;
+        this.teamId = teamId;
     }
 
     @Override
     public Integer getId() {
-        return this._id;
+        return this.id;
     }
 
     @Override
     public String getName() {
-        return this._name;
+        return this.name;
     }
 
-    public UUID get_uuid() {
-        return this._uuid;
+    public UUID getUuid() {
+        return this.uuid;
+    }
+
+    public Integer getTeamId() {
+        return this.teamId;
     }
 }

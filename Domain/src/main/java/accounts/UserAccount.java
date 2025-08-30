@@ -54,6 +54,11 @@ public class UserAccount implements Account {
         return this._id;
     }
 
+    @Override
+    public Currency getCurrency() {
+        return this._currency;
+    }
+
     public Integer getOwnerId() {
         return this._ownerId;
     }
