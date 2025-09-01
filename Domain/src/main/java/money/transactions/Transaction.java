@@ -1,6 +1,6 @@
-package transactions;
+package money.transactions;
 
-import valueObjects.Currency;
+import money.valueObjects.Currency;
 
 public class Transaction {
     public TransactionType type;

@@ -1,10 +1,10 @@
-import valueObjects.Currency;
+import money.valueObjects.Currency;
 import entities.accounts.UserAccount;
 import interfaces.entities.Account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import transactions.Transaction;
-import transactions.TransactionType;
+import money.transactions.Transaction;
+import money.transactions.TransactionType;
 
 import static org.junit.jupiter.api.Assertions.*;
 

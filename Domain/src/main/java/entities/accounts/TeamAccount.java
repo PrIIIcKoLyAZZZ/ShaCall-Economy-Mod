@@ -1,9 +1,9 @@
 package entities.accounts;
 
-import valueObjects.Currency;
+import money.valueObjects.Currency;
 import interfaces.entities.Account;
-import transactions.Transaction;
-import transactions.TransactionType;
+import money.transactions.Transaction;
+import money.transactions.TransactionType;
 
 public class TeamAccount implements Account {
     private final Integer _id;

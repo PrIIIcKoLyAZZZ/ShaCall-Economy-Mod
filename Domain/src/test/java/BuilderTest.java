@@ -1,11 +1,11 @@
-import builder.account.TeamAccountBuilder;
-import builder.account.UserAccountBuilder;
-import builder.client.TeamBuilder;
-import builder.client.UserBuilder;
+import builders.account.TeamAccountBuilder;
+import builders.account.UserAccountBuilder;
+import builders.client.TeamBuilder;
+import builders.client.UserBuilder;
 import interfaces.entities.Account;
 import interfaces.entities.Client;
 import org.junit.jupiter.api.Test;
-import valueObjects.Currency;
+import money.valueObjects.Currency;
 
 import java.util.UUID;
 

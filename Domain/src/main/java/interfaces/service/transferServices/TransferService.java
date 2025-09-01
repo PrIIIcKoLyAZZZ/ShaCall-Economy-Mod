@@ -2,7 +2,7 @@ package interfaces.service.transferServices;
 
 import interfaces.entities.Account;
 import interfaces.entities.Client;
-import transactions.Transaction;
+import money.transactions.Transaction;
 
 import java.util.List;
 import java.util.UUID;

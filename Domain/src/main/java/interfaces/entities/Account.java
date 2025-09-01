@@ -1,8 +1,8 @@
 package interfaces.entities;
 
 import interfaces.Entity;
-import transactions.Transaction;
-import valueObjects.Currency;
+import money.transactions.Transaction;
+import money.valueObjects.Currency;
 
 public interface Account extends Entity {
     public boolean deposit(Transaction transaction);

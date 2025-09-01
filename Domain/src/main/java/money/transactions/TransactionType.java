@@ -1,4 +1,4 @@
-package transactions;
+package money.transactions;
 
 public enum TransactionType {
     INCOME,

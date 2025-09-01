@@ -1,11 +1,11 @@
-package builder;
+package builders;
 
 import dto.transaction.TransactionDTO;
 import interfaces.builder.TransactionBuilder;
 import parsers.TransactionTypeParser;
-import transactions.Transaction;
-import transactions.TransactionType;
-import valueObjects.Currency;
+import money.transactions.Transaction;
+import money.transactions.TransactionType;
+import money.valueObjects.Currency;
 
 public class AccountTransactionBuilder implements TransactionBuilder<Transaction, AccountTransactionBuilder> {
     private TransactionType transactionType;

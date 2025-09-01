@@ -8,8 +8,8 @@ import entities.clients.User;
 import factories.EntityFactory;
 import interfaces.entities.Account;
 import interfaces.service.transferServices.TransferService;
-import transactions.Transaction;
-import valueObjects.Currency;
+import money.transactions.Transaction;
+import money.valueObjects.Currency;
 
 import java.util.List;
 import java.util.UUID;

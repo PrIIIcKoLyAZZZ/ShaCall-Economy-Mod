@@ -1,6 +1,6 @@
 package parsers;
 
-import transactions.TransactionType;
+import money.transactions.TransactionType;
 
 import java.util.Objects;
 

@@ -1,9 +1,9 @@
-package builder.account;
+package builders.account;
 
 import entities.accounts.UserAccount;
 import dto.account.UserAccountDTO;
 import interfaces.builder.EntityBuilder;
-import valueObjects.Currency;
+import money.valueObjects.Currency;
 
 public class UserAccountBuilder implements EntityBuilder<UserAccount, UserAccountBuilder> {
     private Integer _accountId;

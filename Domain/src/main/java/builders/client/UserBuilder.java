@@ -1,4 +1,4 @@
-package builder.client;
+package builders.client;
 
 import dto.entity.UserDTO;
 import entities.clients.User;

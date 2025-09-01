@@ -1,4 +1,4 @@
-package builder.client;
+package builders.client;
 
 import dto.entity.TeamDTO;
 import entities.clients.Team;
