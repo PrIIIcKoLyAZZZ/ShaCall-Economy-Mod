@@ -1,0 +1,54 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ main, master, develop, "feature/*" ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v2
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: gradle
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      # Вариант А: собрать и протестировать весь проект (включая Domain, Service, Infrastructure)
+      - name: Build & Test (all modules)
+        run: ./gradlew clean build --stacktrace --info
+
+      # --- Вариант Б: по-модульно (раскомментируй при желании) ---
+      # - name: Build & Test :Domain
+      #   run: ./gradlew :Domain:build --stacktrace --info
+      # - name: Build & Test :Service
+      #   run: ./gradlew :Service:build --stacktrace --info
+      # - name: Build & Test :Infrastructure
+      #   run: ./gradlew :Infrastructure:build --stacktrace --info
+
+      # Отчёты о тестах попадут в summary автоматически, если Gradle пишет JUnit XML.
+      - name: Publish Test Report (JUnit)
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: JUnit Tests
+          path: "**/build/test-results/test/*.xml"
+          reporter: java-junit
+          fail-on-error: false
