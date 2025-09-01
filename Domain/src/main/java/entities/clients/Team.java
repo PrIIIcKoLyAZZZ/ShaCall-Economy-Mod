@@ -1,8 +1,8 @@
-package entity;
+package entities.clients;
 
-import interfaces.Entity;
+import interfaces.entities.Client;
 
-public class Team implements Entity {
+public class Team implements Client {
     private final Integer id;
     private final Integer ownerId;
     private final String name;

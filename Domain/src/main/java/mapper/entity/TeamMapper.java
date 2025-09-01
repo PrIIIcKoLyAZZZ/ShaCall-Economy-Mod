@@ -1,7 +1,7 @@
 package mapper.entity;
 
 import dto.entity.TeamDTO;
-import entity.Team;
+import entities.clients.Team;
 
 public class TeamMapper {
     public static TeamDTO toDto(Team team) {

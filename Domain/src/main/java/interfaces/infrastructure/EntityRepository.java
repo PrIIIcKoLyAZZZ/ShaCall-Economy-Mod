@@ -1,7 +1,8 @@
 package interfaces.infrastructure;
 
-public interface EntityRepository {
-    public boolean save(DTO dto);
-    public DTO findById();
-    public DTO findByUUID();
+import interfaces.EntityDTO;
+
+public interface EntityRepository<T extends EntityDTO> {
+    void save(T dto);
+    T findById(Integer id);
 }

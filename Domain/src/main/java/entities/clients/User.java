@@ -1,14 +1,14 @@
-package entity;
+package entities.clients;
 
-import interfaces.Entity;
+import interfaces.entities.Client;
 
 import java.util.UUID;
 
-public class User implements Entity {
+public class User implements Client {
     private final Integer id;
     private final UUID uuid;
     private final String name;
-    private final Integer teamId;
+    private Integer teamId;
 
     public User(Integer id, UUID uuid, String name, Integer teamId) {
         this.id = id;
@@ -33,5 +33,9 @@ public class User implements Entity {
 
     public Integer getTeamId() {
         return this.teamId;
+    }
+
+    public void setTeamId(Integer teamId) {
+        this.teamId = teamId;
     }
 }

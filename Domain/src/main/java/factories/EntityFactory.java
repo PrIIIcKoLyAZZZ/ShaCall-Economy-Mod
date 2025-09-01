@@ -2,8 +2,8 @@ package factories;
 
 import builder.account.TeamAccountBuilder;
 import builder.account.UserAccountBuilder;
-import builder.entity.TeamBuilder;
-import builder.entity.UserBuilder;
+import builder.client.TeamBuilder;
+import builder.client.UserBuilder;
 
 public class EntityFactory {
     public static TeamAccountBuilder createTeamAccountBuilder() {

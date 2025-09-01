@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface Entity {
+public interface EntityDTO {
     Integer getId();
 }

@@ -1,11 +1,11 @@
 import builder.account.TeamAccountBuilder;
 import builder.account.UserAccountBuilder;
-import builder.entity.TeamBuilder;
-import builder.entity.UserBuilder;
-import interfaces.Account;
-import interfaces.Entity;
+import builder.client.TeamBuilder;
+import builder.client.UserBuilder;
+import interfaces.entities.Account;
+import interfaces.entities.Client;
 import org.junit.jupiter.api.Test;
-import value_objects.Currency;
+import valueObjects.Currency;
 
 import java.util.UUID;
 
@@ -40,7 +40,7 @@ public class BuilderTest {
 
     @Test
     void team_build_test() {
-        Entity testTeam;
+        Client testTeam;
         TeamBuilder teamBuilder = new TeamBuilder();
         testTeam = teamBuilder
                 .setTeamId(1)
@@ -52,7 +52,7 @@ public class BuilderTest {
 
     @Test
     void user_build_test() {
-        Entity testUser;
+        Client testUser;
         UserBuilder userBuilder = new UserBuilder();
         testUser = userBuilder
                 .setUserId(1)

@@ -1,6 +1,6 @@
-import value_objects.Currency;
-import accounts.TeamAccount;
-import interfaces.Account;
+import valueObjects.Currency;
+import entities.accounts.TeamAccount;
+import interfaces.entities.Account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import transactions.Transaction;

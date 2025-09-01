@@ -1,11 +1,11 @@
 package builder.account;
 
-import accounts.TeamAccount;
+import entities.accounts.TeamAccount;
 import dto.account.TeamAccountDTO;
-import interfaces.builder.AccountBuilder;
-import value_objects.Currency;
+import interfaces.builder.EntityBuilder;
+import valueObjects.Currency;
 
-public class TeamAccountBuilder implements AccountBuilder<TeamAccount, TeamAccountBuilder> {
+public class TeamAccountBuilder implements EntityBuilder<TeamAccount, TeamAccountBuilder> {
     private Integer accountId;
     private Integer accountTeamId;
     private Currency accountCurrency;

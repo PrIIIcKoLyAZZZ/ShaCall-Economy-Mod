@@ -1,4 +1,4 @@
-package value_objects;
+package valueObjects;
 
 public record Currency(String code) {
 }

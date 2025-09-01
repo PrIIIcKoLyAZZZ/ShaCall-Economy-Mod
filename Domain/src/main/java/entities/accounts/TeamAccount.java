@@ -1,7 +1,7 @@
-package accounts;
+package entities.accounts;
 
-import value_objects.Currency;
-import interfaces.Account;
+import valueObjects.Currency;
+import interfaces.entities.Account;
 import transactions.Transaction;
 import transactions.TransactionType;
 

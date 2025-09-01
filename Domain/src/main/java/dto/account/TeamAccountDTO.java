@@ -1,8 +1,8 @@
 package dto.account;
 
-import interfaces.infrastructure.DTO;
+import interfaces.EntityDTO;
 
-public class TeamAccountDTO implements DTO {
+public class TeamAccountDTO implements EntityDTO {
     private Integer id;
     private Integer teamId;
     private String currency;

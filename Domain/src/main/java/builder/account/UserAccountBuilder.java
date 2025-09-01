@@ -1,11 +1,11 @@
 package builder.account;
 
-import accounts.UserAccount;
+import entities.accounts.UserAccount;
 import dto.account.UserAccountDTO;
-import interfaces.builder.AccountBuilder;
-import value_objects.Currency;
+import interfaces.builder.EntityBuilder;
+import valueObjects.Currency;
 
-public class UserAccountBuilder implements AccountBuilder<UserAccount, UserAccountBuilder> {
+public class UserAccountBuilder implements EntityBuilder<UserAccount, UserAccountBuilder> {
     private Integer _accountId;
     private Integer _accountOwnerId;
     private Currency _accountCurrency;
@@ -25,9 +25,9 @@ public class UserAccountBuilder implements AccountBuilder<UserAccount, UserAccou
     public static UserAccountBuilder fromDto(UserAccountDTO dto) {
         return new UserAccountBuilder(
                 dto.getId(),
-                dto.get_ownerId(),
-                new Currency(dto.get_currency()),
-                dto.get_balance()
+                dto.getOwnerId(),
+                new Currency(dto.getCurrency()),
+                dto.getBalance()
         );
     }
 

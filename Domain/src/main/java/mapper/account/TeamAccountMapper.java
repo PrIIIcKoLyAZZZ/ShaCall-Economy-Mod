@@ -1,10 +1,10 @@
 package mapper.account;
 
-import accounts.TeamAccount;
+import entities.accounts.TeamAccount;
 import dto.account.TeamAccountDTO;
 
 public class TeamAccountMapper {
-    public static TeamAccountDTO dto(TeamAccount account) {
+    public static TeamAccountDTO toDto(TeamAccount account) {
         return new TeamAccountDTO(
                 account.getId(),
                 account.getTeamId(),

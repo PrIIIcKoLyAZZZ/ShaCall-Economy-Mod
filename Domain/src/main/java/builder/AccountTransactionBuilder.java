@@ -5,7 +5,7 @@ import interfaces.builder.TransactionBuilder;
 import parsers.TransactionTypeParser;
 import transactions.Transaction;
 import transactions.TransactionType;
-import value_objects.Currency;
+import valueObjects.Currency;
 
 public class AccountTransactionBuilder implements TransactionBuilder<Transaction, AccountTransactionBuilder> {
     private TransactionType transactionType;

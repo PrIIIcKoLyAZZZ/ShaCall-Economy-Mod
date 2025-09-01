@@ -1,7 +1,7 @@
-package builder.entity;
+package builder.client;
 
 import dto.entity.UserDTO;
-import entity.User;
+import entities.clients.User;
 import interfaces.builder.EntityBuilder;
 
 import java.util.UUID;

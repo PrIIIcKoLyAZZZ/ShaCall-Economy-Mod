@@ -1,7 +1,7 @@
-package builder.entity;
+package builder.client;
 
 import dto.entity.TeamDTO;
-import entity.Team;
+import entities.clients.Team;
 import interfaces.builder.EntityBuilder;
 
 public class TeamBuilder implements EntityBuilder<Team, TeamBuilder> {

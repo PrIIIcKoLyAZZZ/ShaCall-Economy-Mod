@@ -1,6 +1,6 @@
 package transactions;
 
-import value_objects.Currency;
+import valueObjects.Currency;
 
 public class Transaction {
     public TransactionType type;
