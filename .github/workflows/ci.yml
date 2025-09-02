@@ -31,19 +31,9 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
 
-      # Вариант А: собрать и протестировать весь проект (включая Domain, Service, Infrastructure)
       - name: Build & Test (all modules)
         run: ./gradlew clean build --stacktrace --info
 
-      # --- Вариант Б: по-модульно (раскомментируй при желании) ---
-      # - name: Build & Test :Domain
-      #   run: ./gradlew :Domain:build --stacktrace --info
-      # - name: Build & Test :Service
-      #   run: ./gradlew :Service:build --stacktrace --info
-      # - name: Build & Test :Infrastructure
-      #   run: ./gradlew :Infrastructure:build --stacktrace --info
-
-      # Отчёты о тестах попадут в summary автоматически, если Gradle пишет JUnit XML.
       - name: Publish Test Report (JUnit)
         if: always()
         uses: dorny/test-reporter@v1
