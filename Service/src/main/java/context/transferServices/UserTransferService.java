@@ -11,6 +11,7 @@ import interfaces.service.transferServices.TransferService;
 import money.transactions.Transaction;
 import money.valueObjects.Currency;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -85,7 +86,24 @@ public class UserTransferService implements TransferService<User, UserAccount> {
         if (foundedAccounts.isEmpty() || foundedAccounts == null)
             return null;
 
-        //TODO
-        return null;
+        return createAccountList(foundedAccounts);
+    }
+
+    private List<UserAccount> createAccountList(List<UserAccountDTO> accountDTOs) {
+        List<UserAccount> accounts = new ArrayList<>();
+        if (accountDTOs.isEmpty() || accountDTOs == null)
+            return null;
+
+        accountDTOs.forEach(account -> accounts.add(
+                EntityFactory
+                        .createUserAccountBuilder()
+                        .setAccountId(account.getId())
+                        .setAccountOwnerId(account.getOwnerId())
+                        .setAccountCurrency(new Currency(account.getCurrency()))
+                        .setAccountBalance(account.getBalance())
+                        .build()
+        ));
+
+        return accounts;
     }
 }
