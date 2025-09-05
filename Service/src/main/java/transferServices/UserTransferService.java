@@ -1,4 +1,4 @@
-package context.transferServices;
+package transferServices;
 
 import context.Context;
 import dto.account.UserAccountDTO;

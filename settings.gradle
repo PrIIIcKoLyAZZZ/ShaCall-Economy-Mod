@@ -14,5 +14,5 @@ plugins {
 }
 
 include 'domain'
-include 'Services'
-include 'Infrastructure'
+include 'service'
+include 'infrastructure'
