@@ -1,34 +1,34 @@
 package dto.account;
 
-import interfaces.infrastructure.DTO;
+import interfaces.EntityDTO;
 
-public class UserAccountDTO implements DTO {
-    private Integer _id;
-    private Integer _ownerId;
-    private String _currency;
-    private double _balance;
+public class UserAccountDTO implements EntityDTO {
+    private Integer id;
+    private Integer ownerId;
+    private String currency;
+    private double balance;
 
-    public UserAccountDTO(Integer _id, Integer _ownerId, String _currency, double _balance) {
-        this._id = _id;
-        this._ownerId = _ownerId;
-        this._currency = _currency;
-        this._balance = _balance;
+    public UserAccountDTO(Integer id, Integer ownerId, String currency, double balance) {
+        this.id = id;
+        this.ownerId = ownerId;
+        this.currency = currency;
+        this.balance = balance;
     }
 
     @Override
     public Integer getId() {
-        return _id;
+        return id;
     }
 
-    public Integer get_ownerId() {
-        return _ownerId;
+    public Integer getOwnerId() {
+        return ownerId;
     }
 
-    public String get_currency() {
-        return _currency;
+    public String getCurrency() {
+        return currency;
     }
 
-    public double get_balance() {
-        return _balance;
+    public double getBalance() {
+        return balance;
     }
 }

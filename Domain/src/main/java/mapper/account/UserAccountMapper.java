@@ -1,6 +1,6 @@
 package mapper.account;
 
-import accounts.UserAccount;
+import entities.accounts.UserAccount;
 import dto.account.UserAccountDTO;
 
 public class UserAccountMapper {

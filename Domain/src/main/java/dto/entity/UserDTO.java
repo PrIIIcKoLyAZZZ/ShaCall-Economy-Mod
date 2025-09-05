@@ -1,10 +1,10 @@
 package dto.entity;
 
-import interfaces.infrastructure.DTO;
+import interfaces.EntityDTO;
 
 import java.util.UUID;
 
-public class UserDTO implements DTO {
+public class UserDTO implements EntityDTO {
     private Integer id;
     private UUID uuid;
     private String name;

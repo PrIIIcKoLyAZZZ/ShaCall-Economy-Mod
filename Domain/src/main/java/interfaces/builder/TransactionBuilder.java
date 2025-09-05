@@ -1,6 +1,6 @@
 package interfaces.builder;
 
-import transactions.Transaction;
+import money.transactions.Transaction;
 
 public interface TransactionBuilder<T extends Transaction, B extends TransactionBuilder<T,B>> {
     public T build();

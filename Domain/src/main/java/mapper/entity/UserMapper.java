@@ -1,7 +1,7 @@
 package mapper.entity;
 
 import dto.entity.UserDTO;
-import entity.User;
+import entities.clients.User;
 
 public class UserMapper {
     public static UserDTO toDto(User user) {

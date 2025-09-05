@@ -1,8 +1,8 @@
 package dto.entity;
 
-import interfaces.infrastructure.DTO;
+import interfaces.EntityDTO;
 
-public class TeamDTO implements DTO {
+public class TeamDTO implements EntityDTO {
     private Integer id;
     private Integer ownerId;
     private String name;

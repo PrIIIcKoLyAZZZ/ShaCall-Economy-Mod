@@ -1,0 +1,51 @@
+name: Build & Test
+
+on:
+  push:
+    branches: [ main, master, develop, "feature/*" ]
+  pull_request:
+    branches: [ main, master, develop ]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v2
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: gradle
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Build & Test (all modules)
+        run: ./gradlew clean build --stacktrace --info
+
+      - name: List test result files (debug)
+        if: always()
+        run: |
+          echo "Looking for test result XMLs..."
+          find . -path "*/build/test-results/test*" -type f -print || true
+
+      - name: Publish Test Report (JUnit)
+        if: always()
+        uses: dorny/test-reporter@v1
+        with:
+          name: JUnit Tests
+          path: "**/build/test-results/test/**/*.xml"
+          reporter: java-junit
+          fail-on-error: false
+          fail-on-empty: false
