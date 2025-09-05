@@ -1,4 +1,4 @@
-package interfaces.infrastructure;
+package interfaces.contracts.infrastructure;
 
 import interfaces.EntityDTO;
 

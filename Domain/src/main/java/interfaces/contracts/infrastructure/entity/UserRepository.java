@@ -1,7 +1,7 @@
-package interfaces.infrastructure.entity;
+package interfaces.contracts.infrastructure.entity;
 
 import dto.entity.UserDTO;
-import interfaces.infrastructure.EntityRepository;
+import interfaces.contracts.infrastructure.EntityRepository;
 
 import java.util.List;
 import java.util.UUID;

@@ -7,7 +7,7 @@ import entities.accounts.UserAccount;
 import entities.clients.User;
 import factories.EntityFactory;
 import interfaces.entities.Account;
-import interfaces.service.transferServices.TransferService;
+import interfaces.contracts.service.transferServices.TransferService;
 import money.transactions.Transaction;
 import money.valueObjects.Currency;
 

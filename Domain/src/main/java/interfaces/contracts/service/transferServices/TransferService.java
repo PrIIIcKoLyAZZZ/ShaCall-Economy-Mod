@@ -1,4 +1,4 @@
-package interfaces.service.transferServices;
+package interfaces.contracts.service.transferServices;
 
 import interfaces.entities.Account;
 import interfaces.entities.Client;

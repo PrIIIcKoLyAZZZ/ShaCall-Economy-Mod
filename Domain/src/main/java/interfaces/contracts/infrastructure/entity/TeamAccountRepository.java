@@ -1,7 +1,7 @@
-package interfaces.infrastructure.entity;
+package interfaces.contracts.infrastructure.entity;
 
 import dto.account.TeamAccountDTO;
-import interfaces.infrastructure.EntityRepository;
+import interfaces.contracts.infrastructure.EntityRepository;
 
 public interface TeamAccountRepository extends EntityRepository<TeamAccountDTO> {
     TeamAccountDTO findByOwnerId(Integer id);

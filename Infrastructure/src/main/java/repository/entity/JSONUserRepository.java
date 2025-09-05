@@ -1,7 +1,7 @@
 package repository.entity;
 
 import dto.entity.UserDTO;
-import interfaces.infrastructure.entity.UserRepository;
+import interfaces.contracts.infrastructure.entity.UserRepository;
 
 import java.util.List;
 import java.util.UUID;

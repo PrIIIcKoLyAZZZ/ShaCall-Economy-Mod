@@ -1,4 +1,4 @@
-package interfaces.infrastructure.entity.transaction;
+package interfaces.contracts.infrastructure.entity.transaction;
 
 import dto.transaction.TransactionDTO;
 

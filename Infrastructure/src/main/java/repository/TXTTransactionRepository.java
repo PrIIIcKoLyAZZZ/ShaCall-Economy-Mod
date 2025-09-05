@@ -1,7 +1,7 @@
 package repository;
 
 import dto.transaction.TransactionDTO;
-import interfaces.infrastructure.entity.transaction.TransactionRepository;
+import interfaces.contracts.infrastructure.entity.transaction.TransactionRepository;
 
 public class TXTTransactionRepository implements TransactionRepository {
     @Override
