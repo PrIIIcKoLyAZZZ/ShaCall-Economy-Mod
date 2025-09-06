@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.UUID;
 
 public interface TransferService<C extends Client, A extends Account> {
-    boolean deposit(Account account, Transaction transaction);
-    boolean withdraw(Account account, Transaction transaction);
+    boolean deposit(A account, Transaction transaction);
+    boolean withdraw(A account, Transaction transaction);
     C findUserById(Integer id);
     C findUserByUUID(UUID uuid);
     A findAccountById(Integer id);

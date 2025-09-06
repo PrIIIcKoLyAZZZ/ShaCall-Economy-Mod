@@ -6,7 +6,6 @@ import dto.entity.UserDTO;
 import entities.accounts.UserAccount;
 import entities.clients.User;
 import factories.EntityFactory;
-import interfaces.entities.Account;
 import interfaces.contracts.service.transferServices.TransferService;
 import money.transactions.Transaction;
 import money.valueObjects.Currency;
@@ -23,15 +22,18 @@ public class UserTransferService implements TransferService<User, UserAccount> {
     }
 
     @Override
-    public boolean deposit(Account account, Transaction transaction) {
+    public boolean deposit(UserAccount account, Transaction transaction) {
         boolean result = account.deposit(transaction);
         if (!result)
             return false;
+
+        // TODO
+        //Save transaction method
         return true;
     }
 
     @Override
-    public boolean withdraw(Account account, Transaction transaction) {
+    public boolean withdraw(UserAccount account, Transaction transaction) {
         return false;
     }
 
