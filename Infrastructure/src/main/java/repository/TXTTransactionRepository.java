@@ -5,7 +5,6 @@ import interfaces.contracts.infrastructure.entity.transaction.TransactionReposit
 
 public class TXTTransactionRepository implements TransactionRepository {
     @Override
-    public boolean save(TransactionDTO transactionDTO) {
-        return false;
+    public void save(TransactionDTO transactionDTO) {
     }
 }

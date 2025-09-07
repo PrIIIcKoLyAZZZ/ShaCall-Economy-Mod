@@ -7,6 +7,8 @@ import entities.accounts.UserAccount;
 import entities.clients.User;
 import factories.EntityFactory;
 import interfaces.contracts.service.transferServices.TransferService;
+import mapper.TransactionMapper;
+import mapper.account.UserAccountMapper;
 import money.transactions.Transaction;
 import money.valueObjects.Currency;
 
@@ -27,18 +29,24 @@ public class UserTransferService implements TransferService<User, UserAccount> {
         if (!result)
             return false;
 
-        // TODO
-        //Save transaction method
+        context.transactionRepository.save(TransactionMapper.toDto(transaction));
+        context.userAccountRepository.save(UserAccountMapper.toDto(account));
         return true;
     }
 
     @Override
     public boolean withdraw(UserAccount account, Transaction transaction) {
+        boolean result = account.withdraw(transaction);
+        if (!result)
+            return false;
+
+        context.transactionRepository.save(TransactionMapper.toDto(transaction));
+        context.userAccountRepository.save(UserAccountMapper.toDto(account));
         return false;
     }
 
     @Override
-    public User findUserById(Integer id) {
+    public User findClientById(Integer id) {
         UserDTO foundedUser = context.userRepository.findById(id);
         if (foundedUser == null)
             return null;
@@ -53,7 +61,7 @@ public class UserTransferService implements TransferService<User, UserAccount> {
     }
 
     @Override
-    public User findUserByUUID(UUID uuid) {
+    public User findClientByUUID(UUID uuid) {
         UserDTO foundedUser = context.userRepository.findByUUID(uuid);
         if (foundedUser == null)
             return null;
