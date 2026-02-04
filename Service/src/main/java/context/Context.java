@@ -4,13 +4,14 @@ import entities.accounts.TeamAccount;
 import entities.accounts.UserAccount;
 import entities.clients.Team;
 import entities.clients.User;
+import interfaces.contracts.infrastructure.entity.TeamAccountRepository;
 import interfaces.contracts.infrastructure.entity.TeamRepository;
 import interfaces.contracts.infrastructure.entity.UserAccountRepository;
 import interfaces.contracts.infrastructure.entity.UserRepository;
 import interfaces.contracts.infrastructure.entity.transaction.TransactionRepository;
 
 public class Context {
-    public TeamAccount teamAccountRepository;
+    public TeamAccountRepository teamAccountRepository;
     public TeamRepository teamRepository;
     public UserAccountRepository userAccountRepository;
     public UserRepository userRepository;
@@ -22,7 +23,7 @@ public class Context {
     public UserAccount currentUserAccount;
     public TeamAccount currentTeamAccount;
 
-    public Context(TeamAccount teamAccountRepository,
+    public Context(TeamAccountRepository teamAccountRepository,
                    TeamRepository teamRepository,
                    UserAccountRepository userAccountRepository,
                    UserRepository userRepository,
